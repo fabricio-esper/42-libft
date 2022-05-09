@@ -5,18 +5,18 @@
 int	main(void)
 {
 	// ft_atoi.c
-	char	*str;
+	/*char	*str;
 
 	str = "	 		-425390afdg";
 	printf("%d\n", ft_atoi(str));
-
-	//ft_strnstr.c
-	/*char	haystack[100] = "Chocolate is good!";
-	char	needle[100] = "is";
-	size_t	len	= 9;
-
-	printf("%s\n", strnstr(haystack, needle, len));
 	*/
+	//ft_strnstr.c
+	char	haystack[100] = "Chocolate is good!";
+	char	needle[100] = "go";
+	size_t	len	= ft_strlen(haystack);
+
+	printf("%s\n", ft_strnstr(haystack, needle, len));
+	
 	/*
 	// ft_strlcat.c
 	char	dst[100] = "Choco";
