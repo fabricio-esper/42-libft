@@ -6,16 +6,18 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:45:56 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/03 11:11:31 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/09 18:30:31 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
