@@ -1,26 +1,26 @@
-NAME = libft.a
+NAME	= libft.a
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra
 
-SRCS = $(wildcard ./ft_*.c)
+SRCS	= $(wildcard ./ft_*.c)
 
-OBJS = $(SRCS:.c=.o)
+OBJS	= $(SRCS:.c=.o)
 
 .c.o:
-	cc $(CFLAGS) -c $< -o $(<:.c=.o) -I ./libft.h
+			cc $(CFLAGS) -c $< -o $(<:.c=.o) -I ./libft.h
 
-$(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
+			ranlib $(NAME)
 
-all: $(NAME)
+all:		$(NAME)
 
 clean:
-	rm -f $(OBJS)
+			rm -f $(OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:		clean
+			rm -f $(NAME)
 
-re:	fclean all
+re:			fclean all
 
-.PHONY: all clean fclean re
+.PHONY: 	all clean fclean re

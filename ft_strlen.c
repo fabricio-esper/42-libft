@@ -6,15 +6,15 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:45:56 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/09 18:30:31 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:22:43 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

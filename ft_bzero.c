@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 08:40:58 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/06 11:58:38 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:32:29 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*str;
 
 	str = (unsigned char *) s;
