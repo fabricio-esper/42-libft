@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:48:32 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/10 14:48:14 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/11 08:03:22 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		len--;
 		i++;
 	}
+	free(temp);
 	return (str_dst);
 }
