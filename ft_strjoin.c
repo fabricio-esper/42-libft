@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:53:28 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/11 14:38:38 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/12 09:33:30 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
-	new_str[i] = 0;
 	return (new_str);
 }

@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strtim.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:48:32 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/12 09:55:35 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/12 10:18:24 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/05/12 11:41:11 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t			i;
-	char			*str_dst;
-	const char		*str_src;
-	char			temp;
+	char	*trimstr;
+	int		i;
+	int		j;
+	int		k;
 
-	str_dst = (char *) dst;
-	str_src = (const char *) src;
-	i = 0;
-	while (i < len)
+	trimstr = malloc((ft_strlen(s1) - ft_strlen(set)) * sizeof(char));
+	if (trimstr == 0)
+		return (0);
+	while (s1[i] != 0)
 	{
-		temp = str_src[i];
-		str_dst[i] = temp;
+		
 		i++;
 	}
-	return (dst);
+	return (trimstr);
 }
