@@ -4,11 +4,76 @@
 
 int	main(void)
 {
+	// ft_isalpha.c
+	/*char	c;
+	int		ret;
+
+	c = '0';
+	ret = ft_isalpha(c);
+	if (ret == 1)
+		printf("ret = %d -- char c faz parte do alfabeto\n", ret);
+	else
+		printf("ret = %d -- char c não faz parte do alfabeto\n", ret);*/
+
+	// ft_isdigit.c
+	/*char	c;
+	int		ret;
+
+	c = 'j';
+	ret = ft_isdigit(c);
+	if (ret == 1)
+		printf("ret = %d -- char c faz parte dos dígitos\n", ret);
+	else
+		printf("ret = %d -- char c não faz parte dos dígitos\n", ret);*/
+
+	// ft_isalnum.c
+	/*char	c;
+	int		ret;
+
+	c = 'a';
+	ret = ft_isalnum(c);
+	if (ret == 1)
+		printf("ret = %d -- char c faz parte dos alfanuméricos\n", ret);
+	else
+		printf("ret = %d -- char c não faz parte dos alfanuméricos\n", ret);*/
+
+	// ft_isascii.c
+	/*char	c;
+	int		ret;
+
+	c = 128;
+	ret = ft_isascii(c);
+	if (ret == 1)
+		printf("ret = %d -- char c faz parte da tabela ascii\n", ret);
+	else
+		printf("ret = %d -- char c não faz parte da tabela ascii\n", ret);*/
+
+	// ft_isprint.c
+	/*char	c;
+	int		ret;
+	
+	c = 127;
+	ret = ft_isprint(c);
+	if (ret == 1)
+		printf("ret = %d -- char c faz parte dos caracteres printaveis\n", ret);
+	else
+		printf("ret = %d -- char c não faz parte dos caracteres printaveis\n", ret);*/
+
 	// ft_strlen.c
 	/*char	*str;
 
 	str = "Chocolate";
 	printf("%d\n", (int) ft_strlen(str));*/
+
+	// ft_memset.c
+	/*char	*b;
+	int		c;
+	size_t	len;
+
+	b = "Chocolate is good";
+	c = 64;
+	len = 9;
+	printf("%p\n", ft_memset(b, c, len));*/
 
 	// ft_atoi.c
 	printf("a int max 2147483647 : %d\n", atoi("2147483647"));
@@ -58,8 +123,7 @@ int	main(void)
     printf("a zero 0 : %d\n", atoi("0"));
     printf("f zero 0 : %d\n", ft_atoi("0"));
     printf("a empty  : %d\n", atoi(""));
-    printf("f empty  : %d\n", ft_atoi(""));	
-
+    printf("f empty  : %d\n", ft_atoi(""));
 
 	//ft_strnstr.c
 	/*char	haystack[100] = "Chocolate is good!";
