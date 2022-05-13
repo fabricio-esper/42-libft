@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 08:08:03 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/13 13:41:40 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/13 18:14:49 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,39 +20,36 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
-	long	nb;
+	long	nbr;
 	long	temp;
 	int		sign;
 	int		i;
 
-	nb = 0;
+	nbr = 0;
 	temp = 0;
 	sign = 1;
 	i = 0;
-	while (ft_isspace(str[i]))
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign *= -1;
 		i++;
-		if (str[i] == '-' || str[i] == '+')
+		if (nptr[i] == '-' || nptr[i] == '+')
 			return (0);
 	}
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(nptr[i]))
 	{
-		temp = nb;
-		nb = (nb * 10) + str[i] - 48;
-		if (nb < temp)
-		{
-			if (sign > 0)
-				return (-1);
-			else if (sign < 0)
-				return (0);
-		}
+		temp = nbr;
+		nbr = (nbr * 10) + nptr[i] - 48;
+		if (nbr < temp && sign > 0)
+			return (-1);
+		else if (nbr < temp && sign < 0)
+			return (0);
 		i++;
 	}
-	return (sign * nb);
+	return (sign * nbr);
 }
