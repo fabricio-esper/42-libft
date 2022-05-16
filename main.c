@@ -75,6 +75,14 @@ int	main(void)
 	len = 9;
 	printf("%p\n", ft_memset(b, c, len));*/
 
+	// ft_strchr.c
+	/*char	*s;
+	int		c;
+
+	s = "Chocolate e guga";
+	c = 'e';
+	printf("%s\n", ft_strchr(s, c));*/
+
 	// ft_atoi.c
 	printf("a int max 2147483647 : %d\n", atoi("2147483647"));
     printf("f int max 2147483647 : %d\n", ft_atoi("2147483647"));
@@ -187,12 +195,12 @@ int	main(void)
 	printf("%s\n", ft_strjoin(s1 , s2));*/
 
 	// ft_strtrim.c
-	/*char	*s1;
+	char	*str;
 	char	*set;
 
-	s1 = "Chocolate branco e bom";
-	set = "branco";
-	printf("%s\n", ft_strtrim(s1, set));*/
+	str = "lalaagulabonitalalalalala";
+	set = "la";
+	printf("%s\n", ft_strtrim(str, set));
 
 	return (0);
 }

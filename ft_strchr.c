@@ -6,25 +6,24 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 13:49:33 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/05 09:17:10 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:18:06 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
+	char	*str;
+	char	find;
 	int		i;
-	char	*pst;
 
-	pst = 0;
+	str = (char *) s;
+	find = (char) c;
 	i = 0;
-	while (s[i] != 0)
+	while (*str != find)
 	{
-		if (c == s[i])
-		{
-			pst = (char *) &s[i];
-			return (pst);
-		}
-		i++;
+		if (*str == 0)
+			return (0);
+		str++;
 	}
-	return (pst);
+	return (str);
 }

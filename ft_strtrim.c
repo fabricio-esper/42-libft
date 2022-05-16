@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 14:00:30 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/16 14:46:01 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/16 10:07:28 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/05/16 10:17:57 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int	ft_memcmp(const	void *s1, const void *s2, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
+
 {
-	unsigned  char	*str_s1;
-	unsigned char	*str_s2;
-	size_t				i;
+	size_t	size_cut;
+	char	*result;
 
-	str_s1 = (unsigned char *) s1;
-	str_s2 = (unsigned char *) s2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n - 1 && str_s1[i] != 0 && str_s2[i] != 0 && str_s1[i]
-		&& str_s2[i])
-		i++;
-	return (str_s1[i] - str_s2[i]);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size_cut = ft_strlen(s1);
+	while (*s1 && ft_strchr(set, s1[size_cut]))
+		size_cut--;
+	result = ft_substr(s1, 0, size_cut + 1);
+	return (result);
 }
