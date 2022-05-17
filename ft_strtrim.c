@@ -6,12 +6,11 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 10:07:28 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/16 10:17:57 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:50:04 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 

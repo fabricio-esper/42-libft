@@ -84,7 +84,7 @@ int	main(void)
 	printf("%s\n", ft_strchr(s, c));*/
 
 	// ft_atoi.c
-	printf("a int max 2147483647 : %d\n", atoi("2147483647"));
+	/*printf("a int max 2147483647 : %d\n", atoi("2147483647"));
     printf("f int max 2147483647 : %d\n", ft_atoi("2147483647"));
     printf("a int min -2147483648 : %d\n", atoi("-2147483648"));
     printf("f int min -2147483648 : %d\n", ft_atoi("-2147483648"));
@@ -131,9 +131,28 @@ int	main(void)
     printf("a zero 0 : %d\n", atoi("0"));
     printf("f zero 0 : %d\n", ft_atoi("0"));
     printf("a empty  : %d\n", atoi(""));
-    printf("f empty  : %d\n", ft_atoi(""));
+    printf("f empty  : %d\n", ft_atoi(""));*/
 
-	//ft_strnstr.c
+	// ft_memcmp.c
+	/*char	s2[] = {0, 0, 127, 0};
+	char	s3[] = {0, 0, 42, 0};
+	printf("%d\n", ft_memcmp(s2, s3, 4));*/
+
+	// ft_strncmp.c 
+	/*char	s1[] = "atoms\0\0\0\0";
+	char	s2[] = "a\0toms\0abc";
+	printf("%d\n", ft_strncmp(s1, s2, 8));
+	printf("%d\n", ft_memcmp(s1, s2, 8));*/
+
+	// ft_strrchr.c
+	/*char	*s;
+	int		c;
+
+	s = "tripouille";
+	c = 0;
+	printf("%s\n", ft_strrchr(s, c));*/
+
+	// ft_strnstr.c
 	/*char	haystack[100] = "Chocolate is good!";
 	char	needle[100] = "go";
 	size_t	len	= 9;
@@ -146,8 +165,14 @@ int	main(void)
 	size_t	dstsize;
 
 	dstsize = 8;
-	printf("%lu\n", ft_strlcat(dst, src, dstsize));
+	printf("%lu\n", strlcat(dst, src, dstsize));
 	printf("%s\n" , dst);*/
+
+	// ft_strlcpy.c
+	/*char	dest[10]; ft_memset(dest, 'A', 10);
+	char	src[] = "coucou";
+	printf("%d\n", (int) ft_strlcpy(dest, src, 0));
+	printf("%c\n", dest[0]);*/
 
 	// ft_memmove.c
 	/*char	dst[100] = "Pizza e bom";
@@ -195,12 +220,12 @@ int	main(void)
 	printf("%s\n", ft_strjoin(s1 , s2));*/
 
 	// ft_strtrim.c
-	char	*str;
+	/*char	*str;
 	char	*set;
 
 	str = "lalaagulabonitalalalalala";
 	set = "la";
-	printf("%s\n", ft_strtrim(str, set));
+	printf("%s\n", ft_strtrim(str, set));*/
 
 	return (0);
 }

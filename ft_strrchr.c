@@ -6,22 +6,26 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:46:33 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/05 09:16:22 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/17 11:23:50 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
 	char	*pst;
 
 	pst = 0;
-	i = 0;
-	while (s[i] != 0)
+	if (c == 0)
+		return ((char *) s + ft_strlen(s));
+	if (!ft_isprint(c))
+		return ((char *) s);
+	while (*s != 0)
 	{
-		if (c == s[i])
-			pst = (char *) &s[i];
-		i++;
+		if (c == *s)
+			pst = (char *) s;
+		s++;
 	}
 	return (pst);
 }
