@@ -1,30 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:04:02 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/18 10:21:42 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/18 13:25:19 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/05/18 14:37:31 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_itoa(int n)
 {
-	size_t		i;
-	char		*str_dst;
-	const char	*str_src;
+	size_t	i;
+	int		j;
+	int		k;
+	int		temp;
+	char	*str;
 
-	str_dst = (char *) dst;
-	str_src = (const char *) src;
+	temp = n;
 	i = 0;
-	while (i < n)
-	{
-		str_dst[i] = str_src[i];
+	if (n < 0)
 		i++;
+	while (temp > 0)
+	{
+		temp = temp / 10;
+		i++; 
 	}
-	return (dst);
+	str = malloc(i * sizeof(char));
+	j = 0;
+	if (n < 0)
+	{
+		str[j] = '-';
+		n = n * -1;
+		j++;
+	}
+	k = 1;
+	while (i > 0)
+	{
+		str[j] = (n / pow(10, k)) + 48;
+		j++;
+		i--;
+	}
+	return (str);
 }

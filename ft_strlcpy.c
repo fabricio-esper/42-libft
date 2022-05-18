@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 12:57:21 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/17 13:06:55 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/18 08:08:50 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t			len_str;
+	size_t			len_src;
 	size_t			i;
 	unsigned char	*str_src;
 
 	i = 0;
 	str_src = (unsigned char *) src;
-	len_str = ft_strlen(src);
+	len_src = ft_strlen(src);
 	if (dstsize == 0)
-		return (len_str);
+		return (len_src);
 	while (str_src[i] != 0 && i < dstsize - 1)
 	{
 		dst[i] = str_src[i];
 		i++;
 	}
 	dst[i] = 0;
-	return (len_str);
+	return (len_src);
 }

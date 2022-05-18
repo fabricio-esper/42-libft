@@ -153,11 +153,10 @@ int	main(void)
 	printf("%s\n", ft_strrchr(s, c));*/
 
 	// ft_strnstr.c
-	/*char	haystack[100] = "Chocolate is good!";
-	char	needle[100] = "go";
-	size_t	len	= 9;
+	/*char	haystack[30] = "aaabcabcd";
+	char	needle[10] = "aabc";
 
-	printf("%s\n", strnstr(haystack, needle, len));*/
+	printf("%s\n", strnstr(haystack, needle, -1));*/
 	
 	// ft_strlcat.c
 	/*char	dst[100] = "Choco";
@@ -226,6 +225,9 @@ int	main(void)
 	str = "lalaagulabonitalalalalala";
 	set = "la";
 	printf("%s\n", ft_strtrim(str, set));*/
+
+	// ft_itoa.c
+	printf("%s\n", ft_itoa(-42));
 
 	return (0);
 }
