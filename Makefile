@@ -7,7 +7,7 @@ SRCS	= $(wildcard ./ft_*.c)
 OBJS	= $(SRCS:.c=.o)
 
 .c.o:
-			cc $(CFLAGS) -c $< -o $(<:.c=.o) -I libft.h
+			cc $(CFLAGS) -c $< -o $(<:.c=.o) -I ./libft.h
 
 $(NAME):	$(OBJS)
 			ar rc $(NAME) $(OBJS)
