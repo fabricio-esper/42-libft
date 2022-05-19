@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 14:46:33 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/19 09:07:45 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/19 12:04:05 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/05/19 14:49:06 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*pst;
 	char	*str;
-	char	find;
+	int		len_s;
+	int		i;
 
-	str = (char *) s;
-	find = (char) c;
-	pst = 0;
-	if (find == 0)
-		return (str + ft_strlen(str));
-	while (*str != 0)
+	len_s = ft_strlen(s);
+	str = malloc(len_s + 1 * sizeof(char));
+	if (str == 0)
+		return (0);
+	i = 0;
+	while (s[i] != 0)
 	{
-		if (find == *str)
-			pst = str;
-		str++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	return (pst);
+	str[i] = 0;
+	return (str);
 }

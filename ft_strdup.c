@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:04:32 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/11 09:21:45 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/19 08:01:29 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	len_s = ft_strlen(s);
-	new_str = malloc(len_s * sizeof(char));
+	new_str = malloc((len_s + 1) * sizeof(char));
+	if (new_str == 0)
+		return (0);
 	i = 0;
 	while (i < len_s)
 	{

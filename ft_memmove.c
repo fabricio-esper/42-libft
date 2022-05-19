@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:48:32 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/16 13:34:14 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/19 08:13:36 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*str_src;
 	char		*temp;
 
+	if (!dst && !src)
+		return (0);
 	str_dst = (char *) dst;
 	str_src = (const char *) src;
 	temp = calloc(len, sizeof(char));

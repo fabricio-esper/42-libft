@@ -149,7 +149,7 @@ int	main(void)
 	int		c;
 
 	s = "tripouille";
-	c = 0;
+	c = 'i';
 	printf("%s\n", ft_strrchr(s, c));*/
 
 	// ft_strnstr.c
@@ -227,7 +227,7 @@ int	main(void)
 	printf("%s\n", ft_strtrim(str, set));*/
 
 	// ft_itoa.c
-	printf("%s\n", ft_itoa(-42));
+	//printf("%s\n", ft_itoa(-5003));
 
 	return (0);
 }
