@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 14:44:07 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/19 16:18:21 by fesper-s         ###   ########.fr       */
+/*   Created: 2022/05/20 10:28:13 by fesper-s          #+#    #+#             */
+/*   Updated: 2022/05/20 11:47:50 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -17,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != 0)
 	{
-		s[i] = (char *) f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 	s[i] = 0;

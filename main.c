@@ -2,6 +2,9 @@
 #include <string.h>
 #include "libft.h"
 
+static char	ft_toupperint(unsigned int i, char c);
+static void	ft_tolowerint(unsigned int c, char *str);
+
 int	main(void)
 {
 	// ft_isalpha.c
@@ -229,5 +232,38 @@ int	main(void)
 	// ft_itoa.c
 	//printf("%s\n", ft_itoa(-5003));
 
+	// ft_strmapi.c
+	/*char			*s;
+
+	s = "Chocolate is good";
+	printf("%s\n", ft_strmapi(s, *ft_toupperint));*/
+
+	// ft_striteri.c
+	char	*str;
+
+	str = "PIZZA IS AWESOME";
+	ft_striteri(str, *ft_tolowerint);
+	printf("%s\n", str);
+
 	return (0);
+}
+
+static void	ft_tolowerint(unsigned int c, char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
+	}
+}
+
+static char	ft_toupperint(unsigned int i, char c)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
