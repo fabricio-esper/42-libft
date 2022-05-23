@@ -239,25 +239,41 @@ int	main(void)
 	printf("%s\n", ft_strmapi(s, *ft_toupperint));*/
 
 	// ft_striteri.c
-	char	*str;
-
-	str = "PIZZA IS AWESOME";
+	/*char	str[100] = "PIZZA IS AWESOME";
 	ft_striteri(str, *ft_tolowerint);
-	printf("%s\n", str);
+	printf("%s\n", str);*/
+
+	// ft_split.c
+	/*char	**final;
+	int		i;
+
+	final = ft_split("chocolate pizza brigadeiro queijo", ' ');
+	i = 0;
+	while (final[i] != 0)
+	{
+		printf("%s\n", final[i]);
+		i++;
+	}*/
+
+	// ft_putchar_fd.c
+	char	c;
+	int		fd;
+
+	c = 'a';
+	fd = 1;
+	ft_putchar_fd(c, fd);
+	
 
 	return (0);
 }
 
 static void	ft_tolowerint(unsigned int c, char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != 0)
+	while (!str)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
-		i++;
+		if (*str >= 'A' && *str <= 'Z')
+			*str += 32;
+		str++;
 	}
 }
 
