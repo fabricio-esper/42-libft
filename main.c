@@ -5,10 +5,10 @@
 static char	ft_toupperint(unsigned int i, char c);
 static void	ft_tolowerint(unsigned int c, char *str);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	// ft_isalpha.c
-	/*char	c;
+	char	c;
 	int		ret;
 
 	c = '0';
@@ -16,7 +16,7 @@ int	main(void)
 	if (ret == 1)
 		printf("ret = %d -- char c faz parte do alfabeto\n", ret);
 	else
-		printf("ret = %d -- char c não faz parte do alfabeto\n", ret);*/
+		printf("ret = %d -- char c não faz parte do alfabeto\n", ret);
 
 	// ft_isdigit.c
 	/*char	c;
@@ -256,13 +256,28 @@ int	main(void)
 	}*/
 
 	// ft_putchar_fd.c
-	char	c;
+	/*char	c;
 	int		fd;
 
 	c = 'a';
 	fd = 1;
-	ft_putchar_fd(c, fd);
+	ft_putchar_fd(c, fd);*/
 	
+	// ft_putstr_fd.c e ft_putendl.c
+	/*char	*str;
+	int		fd;
+
+	str = "chocolate";
+	fd = 1;
+	ft_putendl_fd(str, fd);*/
+
+	// ft_putnbr_fd.c
+	/*int	n;
+	int	fd;
+
+	n = 42;
+	fd = 1;
+	ft_putnbr_fd(n, fd);*/
 
 	return (0);
 }
