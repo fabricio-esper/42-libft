@@ -1,2 +1,2 @@
 # 42 - Libft
-The very first project studying at 42.
+The very first project at 42.
