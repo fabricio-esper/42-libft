@@ -14,20 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*pst;
+	char	*final_pst;
 	char	*str;
 	char	find;
 
 	str = (char *) s;
 	find = (char) c;
-	pst = 0;
+	final_pst = 0;
 	if (find == 0)
 		return (str + ft_strlen(str));
 	while (*str != 0)
 	{
 		if (find == *str)
-			pst = str;
+			final_pst = str;
 		str++;
 	}
-	return (pst);
+	return (final_pst);
 }

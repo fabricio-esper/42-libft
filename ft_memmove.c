@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (0);
 	str_dst = (char *) dst;
 	str_src = (const char *) src;
-	temp = calloc(len, sizeof(char));
+	temp = ft_calloc(len, sizeof(char));
 	i = 0;
 	while (i < len)
 	{
