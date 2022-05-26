@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 10:28:13 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/23 08:29:54 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/26 08:41:37 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i] != 0)
 	{

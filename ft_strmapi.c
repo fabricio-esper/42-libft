@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 12:04:05 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/19 14:49:06 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/26 08:39:59 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len_s;
 	int		i;
 
+	if (!s)
+		return (0);
 	len_s = ft_strlen(s);
 	str = malloc(len_s + 1 * sizeof(char));
 	if (str == 0)

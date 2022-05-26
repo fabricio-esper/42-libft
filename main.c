@@ -8,7 +8,7 @@ static void	ft_tolowerint(unsigned int c, char *str);
 int	main(int argc, char **argv)
 {
 	// ft_isalpha.c
-	char	c;
+	/*char	c;
 	int		ret;
 
 	c = '0';
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 	if (ret == 1)
 		printf("ret = %d -- char c faz parte do alfabeto\n", ret);
 	else
-		printf("ret = %d -- char c não faz parte do alfabeto\n", ret);
+		printf("ret = %d -- char c não faz parte do alfabeto\n", ret);*/
 
 	// ft_isdigit.c
 	/*char	c;
