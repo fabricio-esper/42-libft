@@ -177,11 +177,11 @@ int	main(int argc, char **argv)
 	printf("%c\n", dest[0]);*/
 
 	// ft_memmove.c
-	/*char	dst[100] = "Pizza e bom";
+	/*char	dst[100] = "Pizza e bom, mas ovo de pascoa e melhor";
 	char	src[100] = "Chocolate e melhor";
 	size_t	len = ft_strlen(src);
 
-	printf("%s\n", ft_memmove(dst, src, len));*/
+	printf("%s\n", (char *) ft_memmove(dst, src, len));*/
 
 	// ft_calloc.c
 	/*size_t	count;
