@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 08:33:43 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/26 08:39:09 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/30 07:57:36 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	str = malloc(* sizeof(char *));
+	str = malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (0);
 	i = 0;
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		str[j] = ft_substr(&[i], 0, ft_lencount(&s[i], c));
+		str[j] = ft_substr(&s[i], 0, ft_lencount(&s[i], c));
 		i += ft_lencount(&s[i], c);
 		j++;
 	}

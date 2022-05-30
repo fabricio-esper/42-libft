@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:46:33 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/25 14:59:40 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/30 07:53:35 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*final_pst;
 	char	*str;
 	char	find;
+	size_t	len_str;
 
 	str = (char *) s;
 	find = (char) c;
-	final_pst = 0;
-	while (*str != 0)
+	len_str = ft_strlen(str) + 1;
+	while (len_str--)
 	{
-		if (find == *str)
-			final_pst = str;
-		str++;
+		if (str[len_str] == find)
+			return (&str[len_str]);
 	}
-	return (final_pst);
+	return (0);
 }

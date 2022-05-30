@@ -6,7 +6,7 @@
 /*   By: fesper-s <fesper-s@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:48:32 by fesper-s          #+#    #+#             */
-/*   Updated: 2022/05/19 08:13:36 by fesper-s         ###   ########.fr       */
+/*   Updated: 2022/05/30 08:02:09 by fesper-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	str_src = (const char *) src;
 	if (dst > src)
 	{
-		while (len-- > 0)
+		while (len--)
 			str_dst[len] = str_src[len];
 	}
 	else
