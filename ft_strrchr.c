@@ -21,8 +21,6 @@ char	*ft_strrchr(const char *s, int c)
 	str = (char *) s;
 	find = (char) c;
 	final_pst = 0;
-	if (find == 0)
-		return (str + ft_strlen(str));
 	while (*str != 0)
 	{
 		if (find == *str)
